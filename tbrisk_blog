@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generalized Additive Models</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Sarveshwari Singh</strong> <span>Portfolio</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav> 
+					</header>
+
+				<!-- Menu -->
+					 <nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<!-- <li><a href="landing.html">Landing</a></li> -->
+							<li><a href="https://github.com/SarvSin/sarvsin">About</li> 
+							<!-- <li><a href="elements.html">Elements</a></li> -->
+						</ul>
+						<!-- <ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li> 
+						</ul> -->
+					</nav> 
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Predicting spatial distribution of TB risk</h1>
+									</header>
+                        <h5>Background: Reproduction of commissioned public health data science research. Methodology: Generalized Additive Models to fit nonlinear relationships in data</h5>
+								         <h3 align="center">Introduction</h3>
+								         <h5>A reproduction of a report written for the Mary Tavy hydro-electric power station on a commissioned project</h5>
+								         
+								           <p>  Tuberculosis (TB) is a highly contagious health threat, and quantification of its risk across a region is a crucial task. In this report, the factors influencing the rate of TB cases per unit population are assessed. For a period of 3 years, data on the number of cases in each region are analysed in association with information on various socio-economic variables.  The aim is to understand the influences of socio-economy, spatial, temporal and spatio-temporal factors on the level and spread of TB risk across Brazil.  </p> 
+								         <p align="center">
+<img class="center" width="224" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/e14fdfe3-6814-45d6-af0b-2009bac3f5c5">
+</p>
+<h6 align="center">Figure 1: Spatial distribution of TB risk according to model, 2013</h6>
+                                                    
+								         <h3 align="center">Methods</h3>
+The Generalised Additive Models framework will be used to analyse this problem. Public health data, especially concerning the risk and spread of disease, involves dependence on multiple socio-economic, spatial, and temporal covariates. Forcing a fixed parametric form on complex, unknown relationships can lead to ill-fitting models with adverse consequences. However, GAMs do not require any assumptions on specific forms of relationship between the covariates and the response variable. It is this flexibility that makes this framework ideal for the present problem. 
+
+The number of cases observed in circumscribed monitoring regions depends on the population living in each region. Since this number is different for different regions, modelling the rate instead of count is pursued. To do so, a log of the population size in each monitoring location is added as an “offset” to the covariates as a rearrangement of log of the rate given by cases/unit of population. In addition, because the proportion of cases in a population is small, the Poisson approximation to a Binomial is appropriate. 
+
+Finally, for a response variable distributed according to Poisson, the variance is equal to the mean. After adjusting the structure of the model as described above, extra variance and significant deviance remained. In this analysis, overdispersion is modelled by the Negative Binomial distribution. (Fig. 3)
+								         <p align="center">
+  <img class="center" width="217" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/51e69042-0578-49e0-adf3-2cdeea8b8d7f"></p>
+<h6 align="center">Figure 2: (a) Poor Sanitation and TB risk, 2012-14;</h6>
+                                
+<p align="center">
+<img class="center" width="212" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/033dcb68-7ea4-4c50-b8d1-a5b9fb670757">
+</p>
+<h6 align="center">Figure 2: (b) Timeliness and TB risk, 2012-14</h6> 
+								         <h3 align="center">Results </h3>
+Firstly, to assess the significance of socio-economic covariates and a potential influence of spatial factors, data is purged of any temporal aspects. Original data is subset according to years, and the statistical method of reduction is applied to obtain a model with the highest explanatory power. Doing so for each year out of three yields the same set of highly significant socio-economic covariates, thus affirming the robustness of the model. These variables include Density, Unemployment, Poor Sanitation and Timeliness; their values are found to be consistently influential on TB risk. 
+
+Higher dwelling density is found to have a positive impact on TB risk (Fig. 4(b)); this is understandable as tuberculosis is predominantly an airborne disease. Timeliness is the amount of time taken for a correct diagnosis to be made, and to be reported to the health system. Expectedly, efficiency in the medical sector is a positive determinant in reduction of TB risk (Fig. 2(b)). A higher number of unemployed people in a household contributes to an increased risk of TB (Fig. 4(a)). Unemployment is associated with limited financial resources for sustenance. With a reduced capacity to manage health and nutrition, the influence of unemployment on TB risk is expected as malnutrition severely affects the human immune system. Finally, the non-negative impact of poor sanitation on TB risk is self-evident (Fig. 2(a)); bad personal hygiene can have a significant effect on TB. 
+								         <p align="center">
+  <img class="center" width="262" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/977f979f-c33a-4792-bb96-d09add499485">
+</p>
+<h6 align="center">Figure 4: Dispersion parameter differences across distributions</h6>
+
+								             On average, around 90% of the customer base for substations in cluster 3 is non-domestic, or industrial/commercial. This cluster will hereafter be referred to as industry-dominant cluster. 
+								             Cluster 2 on the other hand counts approximately 90% of its customers in the domestic sphere. This cluster will be called domestic-dominant cluster. Cluster 1 encompasses substations delivering power to all types of customers – domestic, industrial, and commercial. Specifically, 70% of its customers are non-domestic. This cluster will be known as the diversified cluster. Cluster 4 consists mainly of substations delivering to domestic consumers, at around 80%. In addition, 75% of the substations within this cluster are pole mounted, i.e., delivering power to relatively isolated rural areas. Hence, this cluster will be called the rural cluster. 
+								             In 2014, the following major trends were observed in terms of relative cluster-membership shifts – around 22% of substations in the diversified cluster had moved from the domestic-dominant cluster, almost 7% of substations in domestic-dominant cluster were previously in diversified cluster, and 6% of substations in diversified cluster had changed membership from industry-dominant cluster (See Figure 2). In absolute terms, 31 substations changed membership from domestic-dominant cluster to diversified cluster in 2014, whereas 18 substations moved from diversified cluster to domestic-dominant cluster. 7 substations also moved from industry-dominant cluster to diversified cluster in 2014. 
+								         <p align="center">
+								         <img width="400" alt="image" src="https://github.com/SarvSin/powerconsumption/assets/117599272/f1bff488-101d-49f8-b311-d947e84c8b4b">
+								         </p>
+								         <h6 align="center"> Figure 2: Changes in cluster membership from 2013 to 2014</h6>
+								             The large movement from domestic and industry-dominant clusters to diversified cluster implies a trend towards greater diversification in power usage by customers of industry, and domestic-dominant substations. In particular, the significant shift of substations from domestic-dominant cluster to diversified cluster suggests growth of an industrial customer base in a domestic region. This could be due to development of an industrial township, with industrial parks being built around residential areas. Domestic-dominant substations in this area would increasingly need to deliver to industrial and commercial customers, hence resembling power demand patterns of substations belonging to diversified cluster. In the latter cluster, substations serve a clientele consisting 70% of industrial/commercial customers. 
+								         <p align="center">
+								         <img width="452" alt="image" src="https://github.com/SarvSin/powerconsumption/assets/117599272/2b1c9c96-d3e2-4bb5-ac10-87fa89421a9e">
+								         </p>
+								         <h6 align="center">Figure 3: Changes in cluster membership from 2014 to 2015 </h6>
+								             Although these covariates explained a portion of the variance in TB risk, analysing the model fit suggested that some other influential factor was missing from the model. Hence, spatial data was included in the assessment and was found to be highly significant. By including an interaction between the geographical coordinates of regions, the model fit improved and implied the importance of spatial factors in explaining a portion of TB risk besides socio-economic variables selected above. The validation metrics of these models for each year still implied room for improvement. Given the knowledge of specific significant socio-economic factors, and a spatial explanation for TB risk, the data was then pooled to analyse if any overall temporal component was influential.
+<p align="center">
+  <img class="center" width="187" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/d66b099d-2d3c-4750-b777-3cfc01e5490b">
+                          
+ </p>         <h6 align="center">Figure 3: (a) Unemployment and TB risk, 2012-14; </h6>
+<p align="center">
+  <img class="center" width="192" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/31f72b8e-9c7b-433e-986f-8ba5071c63e8">
+</p> <h6 align="center"> Figure 3: (b) Dwelling density and TB risk, 2012-14</h6>
+								             To begin, only the temporal nature of the data was analysed.  All non-spatial covariates were fit with variable Year as the factor smooth, and this model yielded highly significant components. Although an inclusion of time as a differential intercept did not prove to be significant, its association with other non-spatial covariates was consistently informative. This implied a potentially useful interaction of time with the spatial component of data. Thus, an interaction of coordinates with variable Year was tested in multiple methodological variations. 
+
+Considering the aim to quantify risk only across 3 years (2012-2014) and to not extract any predictive value over a longer period, the inclusion of time as a random effect is considered to be redundant. The information given in this case, for both temporal and spatial components, is exhaustive. However, a model with time as a random effect is still fit in the case of expansion of the aim to assess the general influential power of these socio-economic, spatial, and temporal aspects. For this report, the model consists of Year as an interaction “factor-smooth” with other significant socio-economic variables, and as categorical variable for analysis of the spatio-temporal component. This component is found to be highly significant, further to significance of interaction of time with other covariates. Analysis of the nature of this influence reveals that areas in the eastern part of Brazil have a greater propensity for increased TB risk. Given the significance of timeliness, poor sanitation, dwelling density, and unemployment on risk and the prevalence of these socio-economic issues in this region, this observation is not surprising. Within the eastern region, central- areas are more vulnerable relative to north- and south-eastern areas. 
+								         
+								         <h3 align="center">Conclusion</h3>
+This report provides quantitative evidence on the relative importance of various socio-economic factors, and spatial and temporal influences on TB risk in Brazil. Regions in the eastern part of Brazil are most vulnerable to increased risk. The pattern of spread does not appear to have changed significantly (see Fig. 1, 5), though the area of spread in central-eastern Brazil seems to have concentrated through the years. Given the influence of poor sanitation, dwelling density, unemployment, and timeliness of diagnosis on TB risk, it is recommended that the hygiene, and organisation of medical facilities in these regions be given special attention. Although it is clear from Figures 2 and 3 that these aspects of socio-economy are improving with time, public services may also focus on improving the economy of regions at risk. Finally, it must be acknowledged that measurement error, remaining unexplained variance, and the limitation in temporal data renders the results of this report specific, and an incomplete description of influences on TB risk in Brazil over 2012-2014. 						</div>
+					<p align="center">
+  <img width="226" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/4fa95e25-bfec-4ef1-b9c5-31dc0423b040">
+</p><h6 align="center"> Figure 5: Spatial distribution of TB risk, (a) 2012; </h6>
+
+   <p align="center">                                                    
+  <img class="center" width="224" alt="image" src="https://github.com/SarvSin/tbrisk_commission/assets/117599272/254a14ac-0c48-4bdb-b59c-125ce4b3aa28">
+</p>     <h6 align="center">  Figure 5: Spatial distribution of TB risk, (b) 2014 </h6>
+                                        
+
+</section> 
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
+								<li><a href="mailto:sarveshwarisingh22@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+								<li><a href="https://github.com/SarvSin" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/sarveshwarisingh/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Sarveshwari Singh</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
